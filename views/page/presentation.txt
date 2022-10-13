@@ -1,0 +1,1 @@
+les fichiers servent a lier toutes les pages du projet DevGestion a leur html correspondant

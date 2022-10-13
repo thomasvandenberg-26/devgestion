@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Source+Code+Pro&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+main .hautdepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: "Roboto", "sans-serif";
+  font-size: 16px;
+  color: black;
+  width: 100%;
+}
+
+main .hautdepage .devcav {
+  width: 75%;
+}
+
+main .hautdepage .devcav img {
+  width: 50%;
+  max-width: 408px;
+}
+
+main .hautdepage .devcav div {
+  margin-top: 17px;
+}
+
+main .hautdepage .devcav div P {
+  margin-top: 8px;
+}
+
+main .hautdepage .titre {
+  width: 25%;
+}
+
+main .hautdepage .titre h2 {
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #28eeca;
+  width: 100%;
+}
+
+main .hautdepage .coordonnees {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 65%;
+}
+
+main .hautdepage .coordonnees span {
+  width: 100%;
+  margin: 8px 0px;
+  padding: 8px;
+}
+
+main .hautdepage .coordonnees article {
+  width: 35%;
+  padding: 8px;
+}
+
+main .hautdepage .coordonnees article strong {
+  width: 100%;
+  background-color: rgba(40, 238, 202, 0.3);
+}
+
+main .hautdepage .coordonnees article p {
+  width: 100%;
+}
+
+main .millieudepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+main .millieudepage strong {
+  background-color: rgba(40, 238, 202, 0.3);
+}
+
+main .millieudepage p {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: "Roboto", "sans-serif";
+  font-size: 16px;
+  color: black;
+}
+
+main .millieudepage table {
+  width: 100%;
+}
+
+main .millieudepage table thead tr th {
+  width: 100%;
+  background-color: rgba(40, 238, 202, 0.3);
+  text-align: center;
+}
+
+main .millieudepage table tbody tr td {
+  width: 100%;
+  border: solid black 1px;
+}
+
+main .basdepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+main .basdepage span {
+  width: 50%;
+  background-color: rgba(40, 238, 202, 0.3);
+}
+
+main .basdepage table {
+  width: 50%;
+  border: solid black 1px;
+}
+
+main .basdepage table tbody tr td {
+  background-color: rgba(40, 238, 202, 0.3);
+}
+
+main .basdepage table tbody tr td:first-child {
+  border: solid black 1px;
+  background-color: #28eeca;
+}
+
+main .informations p {
+  width: 100%;
+  text-align: center;
+}
+/*# sourceMappingURL=templatepdf.css.map */

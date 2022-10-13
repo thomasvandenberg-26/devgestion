@@ -1,0 +1,1177 @@
+@charset "UTF-8";
+/* -------------------------------- Général ------------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+main {
+  max-width: 1640px;
+  margin: auto;
+}
+
+body {
+  background-color: #1f2029;
+}
+
+.main_comptabilite {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+}
+
+.main_comptabilite .tab {
+  overflow: hidden;
+  background-color: rgba(242, 242, 242, 0.1);
+  margin-top: 32px;
+  border-radius: 8px 8px 0px 0px;
+  border: 1px solid #f2f2f2;
+  border-bottom: none;
+}
+
+.main_comptabilite .tab a {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 17px;
+  color: #1f2029;
+}
+
+.main_comptabilite .tab a:hover {
+  color: #28eeca;
+  background-color: #ddd;
+}
+
+.main_comptabilite .tab a.active {
+  background-color: #ccc;
+}
+
+.main_comptabilite .tabcontent {
+  background-color: rgba(242, 242, 242, 0.1);
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  margin-bottom: 32px;
+}
+
+.main_comptabilite h1 {
+  margin: 16px;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+}
+
+.main_comptabilite .ajout_compta {
+  width: 100%;
+  background-color: rgba(242, 242, 242, 0.1);
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.main_comptabilite .ajout_compta select {
+  padding: 8px;
+  border-radius: 16px;
+  border: 2px solid #1f2029;
+}
+
+.main_comptabilite .ajout_compta select option {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  color: #1f2029;
+  border-radius: 7px;
+}
+
+.main_comptabilite .ajout_compta select:hover, .main_comptabilite .ajout_compta select:focus {
+  border: 2px solid #28eeca;
+}
+
+.main_comptabilite .ajout_compta input[type="text"], .main_comptabilite .ajout_compta input[type="number"], .main_comptabilite .ajout_compta input[type="email"], .main_comptabilite .ajout_compta input[type="tel"], .main_comptabilite .ajout_compta input[type="password"], .main_comptabilite .ajout_compta textarea {
+  background-color: transparent;
+  border-bottom: 1px solid #818181;
+  color: #f2f2f2;
+}
+
+.main_comptabilite .ajout_compta input[type="text"]:focus, .main_comptabilite .ajout_compta input[type="text"]:hover, .main_comptabilite .ajout_compta input[type="number"]:focus, .main_comptabilite .ajout_compta input[type="number"]:hover, .main_comptabilite .ajout_compta input[type="email"]:focus, .main_comptabilite .ajout_compta input[type="email"]:hover, .main_comptabilite .ajout_compta input[type="tel"]:focus, .main_comptabilite .ajout_compta input[type="tel"]:hover, .main_comptabilite .ajout_compta input[type="password"]:focus, .main_comptabilite .ajout_compta input[type="password"]:hover, .main_comptabilite .ajout_compta textarea:focus, .main_comptabilite .ajout_compta textarea:hover {
+  border-bottom: 1px solid #28eeca;
+}
+
+.main_comptabilite .ajout_compta input[type="date"] {
+  border-radius: 16px;
+  border: 2px solid #1f2029;
+}
+
+.main_comptabilite .ajout_compta input[type="date"]:hover, .main_comptabilite .ajout_compta input[type="date"]:focus {
+  border: 2px solid #28eeca;
+}
+
+.main_comptabilite .ajout_compta .fichier {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.main_comptabilite .ajout_compta .fichier .btn-upload {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  background-color: transparent;
+  border: 1px solid #f2f2f2;
+  color: #f2f2f2;
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+
+.main_comptabilite .ajout_compta .fichier .btn-upload:hover, .main_comptabilite .ajout_compta .fichier .btn-upload:focus {
+  border: 1px solid #28eeca;
+}
+
+.main_comptabilite .ajout_compta .fichier input[type="file"] {
+  left: 0;
+  top: 0;
+  opacity: 0;
+  position: absolute;
+  font-size: 90px;
+}
+
+.main_comptabilite .ajout_compta input[type="submit"], .main_comptabilite .ajout_compta button {
+  background-color: transparent;
+  border-radius: 7px;
+  border: 1px solid #28eeca;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+  font-size: 32px;
+  padding: 8px 64px;
+  cursor: pointer;
+}
+
+.main_comptabilite .ajout_compta h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+  padding: 32px;
+}
+
+.main_comptabilite .ajout_compta div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 90%;
+  margin: 32px 5%;
+}
+
+.main_comptabilite .ajout_compta div label {
+  width: 10%;
+  margin: 8px;
+}
+
+.main_comptabilite .ajout_compta div select,
+.main_comptabilite .ajout_compta div input,
+.main_comptabilite .ajout_compta div .fichier {
+  width: 22%;
+}
+
+.main_comptabilite .ajout_compta div .fichier {
+  margin: 0;
+  margin-left: 32px;
+}
+
+.main_comptabilite .ajout_compta input[type="submit"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.main_comptabilite .tabcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.main_comptabilite .tabcontent input[type="date"] {
+  border-radius: 16px;
+  border: 2px solid #1f2029;
+}
+
+.main_comptabilite .tabcontent input[type="date"]:hover, .main_comptabilite .tabcontent input[type="date"]:focus {
+  border: 2px solid #28eeca;
+}
+
+.main_comptabilite .tabcontent input[type="submit"], .main_comptabilite .tabcontent button {
+  background-color: transparent;
+  border-radius: 7px;
+  border: 1px solid #28eeca;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+  font-size: 32px;
+  padding: 8px 64px;
+  cursor: pointer;
+}
+
+.main_comptabilite .tabcontent table {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.main_comptabilite .tabcontent table td, .main_comptabilite .tabcontent table th {
+  border: 1px solid #818181;
+  padding: 8px;
+}
+
+.main_comptabilite .tabcontent table td button {
+  font-size: 16px;
+}
+
+.main_comptabilite .tabcontent table tr:nth-child(even) {
+  background-color: #f2f2f2;
+  color: #1f2029;
+}
+
+.main_comptabilite .tabcontent table tr:nth-child(even) button {
+  color: #1f2029;
+}
+
+.main_comptabilite .tabcontent table tr:hover {
+  background-color: #818181;
+}
+
+.main_comptabilite .tabcontent table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #28eeca;
+  color: white;
+}
+
+.main_comptabilite .tabcontent form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+}
+
+.main_comptabilite .tabcontent form label {
+  width: 10%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.main_comptabilite .tabcontent form input {
+  width: 35%;
+  margin: 2.5%;
+  height: 32px;
+}
+
+.main_comptabilite .tabcontent form input[type="submit"] {
+  font-size: 16px;
+}
+
+.main_comptabilite .tabcontent img {
+  height: 32px;
+  width: 20%;
+}
+
+.main_comptabilite .tabcontent table {
+  width: 95%;
+  margin: 2.5%;
+}
+
+.main_client {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  margin-top: 32px;
+}
+
+.main_client input[type="text"], .main_client input[type="number"], .main_client input[type="email"], .main_client input[type="tel"], .main_client input[type="password"], .main_client textarea {
+  background-color: transparent;
+  border-bottom: 1px solid #818181;
+  color: #f2f2f2;
+}
+
+.main_client input[type="text"]:focus, .main_client input[type="text"]:hover, .main_client input[type="number"]:focus, .main_client input[type="number"]:hover, .main_client input[type="email"]:focus, .main_client input[type="email"]:hover, .main_client input[type="tel"]:focus, .main_client input[type="tel"]:hover, .main_client input[type="password"]:focus, .main_client input[type="password"]:hover, .main_client textarea:focus, .main_client textarea:hover {
+  border-bottom: 1px solid #28eeca;
+}
+
+.main_client input[type="submit"], .main_client button {
+  background-color: transparent;
+  border-radius: 7px;
+  border: 1px solid #28eeca;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+  font-size: 32px;
+  padding: 8px 64px;
+  cursor: pointer;
+}
+
+.main_client h1 {
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+}
+
+.main_client h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+  width: 60%;
+}
+
+.main_client label {
+  margin: 16px;
+  width: 15%;
+}
+
+.main_client input {
+  width: 30%;
+  margin: 16px;
+}
+
+.main_client button {
+  font-size: 16px;
+  width: 40%;
+}
+
+.main_client .ajout_client {
+  width: 100%;
+  background-color: rgba(242, 242, 242, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+}
+
+.main_client .ajout_client div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.main_client .ajout_client div .cent {
+  width: 100%;
+}
+
+.main_client .ajout_client .projet .description {
+  width: 100%;
+}
+
+.main_client .ajout_client .projet textarea {
+  width: 100%;
+  height: 64px;
+}
+
+.main_client .ajout_client input[type="submit"] {
+  margin: auto;
+  display: block;
+}
+
+.main_client .tout_client {
+  width: 100%;
+  background-color: rgba(242, 242, 242, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.main_client .tout_client table {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.main_client .tout_client table td, .main_client .tout_client table th {
+  border: 1px solid #818181;
+  padding: 8px;
+}
+
+.main_client .tout_client table td button {
+  font-size: 16px;
+}
+
+.main_client .tout_client table tr:nth-child(even) {
+  background-color: #f2f2f2;
+  color: #1f2029;
+}
+
+.main_client .tout_client table tr:nth-child(even) button {
+  color: #1f2029;
+}
+
+.main_client .tout_client table tr:hover {
+  background-color: #818181;
+}
+
+.main_client .tout_client table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #28eeca;
+  color: white;
+}
+
+.main_client .tout_client input[type="submit"] {
+  font-size: 16px;
+}
+
+.main_parametre {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  margin-top: 32px;
+}
+
+.main_parametre h1 {
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+}
+
+.main_parametre h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+}
+
+.main_parametre form {
+  width: 100%;
+  background-color: rgba(242, 242, 242, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.main_parametre form input[type="submit"], .main_parametre form button {
+  background-color: transparent;
+  border-radius: 7px;
+  border: 1px solid #28eeca;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+  font-size: 32px;
+  padding: 8px 64px;
+  cursor: pointer;
+}
+
+.main_parametre form input[type="text"], .main_parametre form input[type="number"], .main_parametre form input[type="email"], .main_parametre form input[type="tel"], .main_parametre form input[type="password"], .main_parametre form textarea {
+  background-color: transparent;
+  border-bottom: 1px solid #818181;
+  color: #f2f2f2;
+}
+
+.main_parametre form input[type="text"]:focus, .main_parametre form input[type="text"]:hover, .main_parametre form input[type="number"]:focus, .main_parametre form input[type="number"]:hover, .main_parametre form input[type="email"]:focus, .main_parametre form input[type="email"]:hover, .main_parametre form input[type="tel"]:focus, .main_parametre form input[type="tel"]:hover, .main_parametre form input[type="password"]:focus, .main_parametre form input[type="password"]:hover, .main_parametre form textarea:focus, .main_parametre form textarea:hover {
+  border-bottom: 1px solid #28eeca;
+}
+
+.main_parametre form label {
+  width: 10%;
+  margin: 8px;
+}
+
+.main_parametre form input[type="email"],
+.main_parametre form input[type="password"] {
+  width: 39%;
+  margin: 8px;
+}
+
+.main_parametre form input[type="submit"] {
+  margin: auto;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.main_profil_client h1 {
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.main_profil_client .projet_client .slider {
+  margin: 32px;
+  max-width: 90%;
+}
+
+.main_profil_client .projet_client .slide_viewer {
+  height: 340px;
+  overflow: hidden;
+  position: relative;
+}
+
+.main_profil_client .projet_client .slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.main_profil_client .projet_client .slide {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  border-radius: 32px 32px 32px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main_profil_client .projet_client .slide .barrebleu {
+  background-color: #28eeca;
+  width: 1%;
+  margin-left: 32px;
+}
+
+.main_profil_client .projet_client .slide article {
+  width: 80%;
+}
+
+.main_profil_client .projet_client .slide h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+  color: #f2f2f2;
+  width: 100%;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.main_profil_client .projet_client .slide h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+  color: #28eeca;
+  margin: 32px;
+}
+
+.main_profil_client .projet_client .slide p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  margin: 32px;
+}
+
+.main_profil_client .projet_client .slide:first-child {
+  display: block;
+}
+
+.main_profil_client .projet_client .slide:nth-of-type(1) {
+  background: #818181;
+}
+
+.main_profil_client .projet_client .slide:nth-of-type(2) {
+  background: #f4e4cd;
+}
+
+.main_profil_client .projet_client .slide:nth-of-type(3) {
+  background: #c75534;
+}
+
+.main_profil_client .projet_client .slide:nth-of-type(4) {
+  background: #818181;
+}
+
+.main_profil_client .projet_client .slide_buttons {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.main_profil_client .projet_client a.slide_btn {
+  color: #474544;
+  font-size: 42px;
+  margin: 0 0.175em;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.main_profil_client .projet_client .slide_btn.active,
+.main_profil_client .projet_client .slide_btn:hover {
+  cursor: pointer;
+}
+
+.main_profil_client .projet_client .directional_nav {
+  height: 340px;
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+  top: -340px;
+}
+
+.main_profil_client .projet_client .previous_btn {
+  bottom: 0;
+  left: -0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+
+.main_profil_client .projet_client .next_btn {
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.main_profil_client .projet_client .previous_btn,
+.main_profil_client .projet_client .next_btn {
+  cursor: pointer;
+  height: 65px;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  width: 65px;
+}
+
+.main_profil_client .projet_client .previous_btn:hover,
+.main_profil_client .projet_client .next_btn:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .main_profil_client .projet_client .previous_btn {
+    left: 50px;
+  }
+  .main_profil_client .projet_client .next_btn {
+    right: 50px;
+  }
+}
+
+.main_profil_client .contact_client {
+  width: 100%;
+  background-color: rgba(242, 242, 242, 0.1);
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 32px;
+}
+
+.main_profil_client .contact_client h2 {
+  margin: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+}
+
+.main_profil_client .contact_client .visitcard {
+  width: 33%;
+  margin-left: -49px;
+  margin-top: 72px;
+  margin-bottom: 32px;
+  background-color: #1f2029;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main_profil_client .contact_client .visitcard .barrebleu2 {
+  width: 1px;
+  margin-left: 24px;
+  background-color: #28eeca;
+  height: 100%;
+}
+
+.main_profil_client .contact_client .visitcard .detail_contact {
+  width: 70%;
+}
+
+.main_profil_client .contact_client .visitcard .detail_contact h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+  margin-left: 32px;
+  margin-top: 8px;
+}
+
+.main_profil_client .contact_client .visitcard .detail_contact span {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+  margin-left: 32px;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.main_profil_client .contact_client .visitcard .detail_contact p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  margin-left: 64px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.main_profil_client .contact_client .visitcard .detail_contact p,
+.main_profil_client .contact_client .visitcard .detail_contact h3,
+.main_profil_client .contact_client .visitcard .detail_contact span {
+  width: 100%;
+}
+
+.main_profil_client .contact_client .visitcard article {
+  width: 25%;
+}
+
+.main_profil_client .contact_client .visitcard article span {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.main_profil_client .contact_client .visitcard article p {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+}
+
+.main_profil_client .contact_client .visitcard article #qrcode {
+  width: 100%;
+  background-color: #f2f2f2;
+  border-radius: 16px;
+  max-width: 100px;
+}
+
+.main_profil_client .contact_client .visitcard article #qrcode img {
+  width: 100%;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  padding: 8px;
+}
+
+.main_profil_client .contact_client .visitcard article #qrcode input {
+  display: none;
+}
+
+/* helpers/align.css */
+.align {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.grid {
+  inline-size: 90%;
+  margin-inline: auto;
+  max-inline-size: 20rem;
+}
+
+.grid img {
+  width: 100%;
+  margin-bottom: 32px;
+  max-width: 327px;
+}
+
+/* helpers/hidden.css */
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* helpers/icon.css */
+:root {
+  --iconFill: var(--baseColor);
+}
+
+.icons {
+  display: none;
+}
+
+.icon {
+  block-size: 1em;
+  display: inline-block;
+  fill: var(--iconFill);
+  inline-size: 1em;
+  vertical-align: middle;
+}
+
+/* layout/base.css */
+:root {
+  --htmlFontSize: 100%;
+  --bodyBackgroundColor: #1f2029;
+  --bodyColor: var(--baseColor);
+  --bodyFontFamily: "Open Sans";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+}
+
+* {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: var(--htmlFontSize);
+}
+
+body {
+  background-color: var(--bodyBackgroundColor);
+  color: var(--bodyColor);
+  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+  font-size: var(--bodyFontSize);
+  font-weight: var(--bodyFontWeight);
+  line-height: var(--bodyLineHeight);
+  margin: 0;
+  min-block-size: 100vh;
+}
+
+/* modules/anchor.css */
+:root {
+  --anchorColor: #eee;
+}
+
+a {
+  color: var(--anchorColor);
+  outline: 0;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  text-decoration: underline;
+}
+
+/* modules/form.css */
+:root {
+  --formGap: 0.875rem;
+}
+
+input {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.form {
+  display: -ms-grid;
+  display: grid;
+  gap: var(--formGap);
+}
+
+.form input[type="password"], .form input[type="text"], .form input[type="submit"] {
+  inline-size: 100%;
+}
+
+.form__field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* modules/login.css */
+:root {
+  --loginBorderRadus: 0.25rem;
+  --loginColor: #eee;
+  --loginInputBackgroundColor: #b3adad;
+  --loginInputHoverBackgroundColor: #434a52;
+  --loginLabelBackgroundColor: #818181;
+  --loginSubmitBackgroundColor: #28eeca;
+  --loginSubmitColor: #eee;
+  --loginSubmitHoverBackgroundColor: #0dba9b;
+}
+
+.login {
+  color: var(--loginColor);
+}
+
+.login label {
+  border-radius: var(--loginBorderRadus);
+  padding: 1rem;
+}
+
+.login input[type="text"], .login input[type="password"], .login input[type="submit"] {
+  border-radius: var(--loginBorderRadus);
+  padding: 1rem;
+}
+
+.login label {
+  background-color: var(--loginLabelBackgroundColor);
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  padding-inline: 1.25rem;
+}
+
+.login input[type="password"], .login input[type="text"] {
+  background-color: var(--loginInputBackgroundColor);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.login input[type="password"]:focus, .login input[type="password"]:hover {
+  background-color: var(--loginInputHoverBackgroundColor);
+}
+
+.login input[type="text"]:focus, .login input[type="text"]:hover {
+  background-color: var(--loginInputHoverBackgroundColor);
+}
+
+.login input[type="submit"] {
+  background-color: var(--loginSubmitBackgroundColor);
+  color: var(--loginSubmitColor);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.login input[type="submit"]:focus, .login input[type="submit"]:hover {
+  background-color: var(--loginSubmitHoverBackgroundColor);
+}
+
+/* modules/text.css */
+p {
+  margin-block: 1.5rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.main_devis_facture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.main_devis_facture h1 {
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+  margin: 32px;
+  font-size: 48px;
+}
+
+.main_devis_facture h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+  margin: 32px;
+}
+
+.main_devis_facture form {
+  width: 100%;
+  background-color: rgba(242, 242, 242, 0.1);
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 32px;
+}
+
+.main_devis_facture article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  margin-left: 16px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.main_devis_facture article input[type="text"], .main_devis_facture article input[type="number"], .main_devis_facture article input[type="email"], .main_devis_facture article input[type="tel"], .main_devis_facture article input[type="password"], .main_devis_facture article textarea {
+  background-color: transparent;
+  border-bottom: 1px solid #818181;
+  color: #f2f2f2;
+}
+
+.main_devis_facture article input[type="text"]:focus, .main_devis_facture article input[type="text"]:hover, .main_devis_facture article input[type="number"]:focus, .main_devis_facture article input[type="number"]:hover, .main_devis_facture article input[type="email"]:focus, .main_devis_facture article input[type="email"]:hover, .main_devis_facture article input[type="tel"]:focus, .main_devis_facture article input[type="tel"]:hover, .main_devis_facture article input[type="password"]:focus, .main_devis_facture article input[type="password"]:hover, .main_devis_facture article textarea:focus, .main_devis_facture article textarea:hover {
+  border-bottom: 1px solid #28eeca;
+}
+
+.main_devis_facture article select {
+  padding: 8px;
+  border-radius: 16px;
+  border: 2px solid #1f2029;
+}
+
+.main_devis_facture article select option {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #f2f2f2;
+  color: #1f2029;
+  border-radius: 7px;
+}
+
+.main_devis_facture article select:hover, .main_devis_facture article select:focus {
+  border: 2px solid #28eeca;
+}
+
+.main_devis_facture article h2 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+  width: 100%;
+}
+
+.main_devis_facture article div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 45%;
+  margin: 2.5%;
+}
+
+.main_devis_facture article div input,
+.main_devis_facture article div label,
+.main_devis_facture article div select {
+  width: 100%;
+}
+
+.main_devis_facture button {
+  width: 100%;
+}
+
+.main_devis_facture button input[type="submit"], .main_devis_facture button button {
+  background-color: transparent;
+  border-radius: 7px;
+  border: 1px solid #28eeca;
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+  font-size: 32px;
+  padding: 8px 64px;
+  cursor: pointer;
+}
+
+.main_pdf h1 {
+  font-family: "Hammersmith One", sans-serif;
+  font-size: 64px;
+  color: #f2f2f2;
+}
+
+.main_pdf div {
+  background-color: #f2f2f2;
+  margin: 32px;
+  width: 100px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+header img {
+  width: 20%;
+}
+
+header nav {
+  width: 80%;
+}
+
+header nav a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 32px;
+  color: #818181;
+  position: relative;
+  text-decoration: none;
+  float: right;
+  margin: 16px;
+}
+
+header nav a::after {
+  content: "";
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.1em;
+  background: #28eeca;
+  z-index: -1;
+  opacity: 0.8;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+header nav a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+/*# sourceMappingURL=style.css.map */

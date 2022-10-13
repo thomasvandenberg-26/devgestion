@@ -1,0 +1,706 @@
+.main_comptabilite {
+  @include paragraphe();
+  @include tab();
+  h1 {
+    margin: 16px;
+    @include titre();
+  }
+  .ajout_compta {
+    @include bg();
+    @include select();
+    @include zone_text();
+    @include date();
+    @include fichier();
+    @include btn();
+    padding: 8px;
+
+    h2 {
+      @include sous-titre();
+      padding: 32px;
+    }
+    div {
+      @include flex();
+      width: 90%;
+      margin: 32px 5%;
+      label {
+        width: 10%;
+        margin: 8px;
+      }
+      select,
+      input,
+      .fichier {
+        width: 22%;
+      }
+      .fichier {
+        margin: 0;
+        margin-left: 32px;
+      }
+    }
+    input[type="submit"] {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 32px;
+    }
+  }
+
+  .tabcontent {
+    @include flex();
+    @include date();
+    @include btn();
+    @include table();
+    width: 100%;
+    form {
+      @include flex();
+      width: 50%;
+      label {
+        width: 10%;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+      input {
+        width: 35%;
+        margin: 2.5%;
+        height: 32px;
+      }
+      input[type="submit"] {
+        font-size: 16px;
+      }
+    }
+    img {
+      height: 32px;
+      width: 20%;
+    }
+    table {
+      width: 95%;
+      margin: 2.5%;
+    }
+  }
+}
+
+.main_client {
+  @include paragraphe();
+  margin-top: 32px;
+  @include zone_text();
+  @include btn();
+  h1 {
+    @include titre();
+  }
+  h2 {
+    @include sous-titre();
+    width: 60%;
+  }
+  label {
+    margin: 16px;
+    width: 15%;
+  }
+  input {
+    width: 30%;
+    margin: 16px;
+  }
+  button {
+    font-size: 16px;
+    width: 40%;
+  }
+  .ajout_client {
+    @include bg();
+    padding: 32px;
+    width: 100%;
+
+    div {
+      @include flex();
+      width: 100%;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      .cent {
+        width: 100%;
+      }
+    }
+    .projet {
+      .description {
+        width: 100%;
+      }
+      textarea {
+        width: 100%;
+        height: 64px;
+      }
+    }
+    input[type="submit"] {
+      margin: auto;
+      display: block;
+    }
+  }
+  .tout_client {
+    @include bg();
+    @include table();
+    padding: 32px;
+    width: 100%;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    input[type="submit"] {
+      font-size: 16px;
+    }
+  }
+}
+
+.main_parametre {
+  @include paragraphe();
+  margin-top: 32px;
+  h1 {
+    @include titre();
+  }
+  h2 {
+    @include sous-titre();
+  }
+  form {
+    @include btn();
+    @include zone_text();
+    @include bg();
+    padding: 32px;
+    label {
+      width: 10%;
+      margin: 8px;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 39%;
+      margin: 8px;
+    }
+    input[type="submit"] {
+      margin: auto;
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.main_profil_client {
+  h1 {
+    @include titre();
+    text-align: center;
+    margin-top: 32px;
+  }
+  .projet_client {
+    .slider {
+      margin: 32px;
+      max-width: 90%;
+    }
+
+    .slide_viewer {
+      height: 340px;
+
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide_group {
+      height: 100%;
+      position: relative;
+      width: 100%;
+    }
+
+    .slide {
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      border-radius: 32px 32px 32px 32px;
+      @include flex();
+
+      .barrebleu {
+        background-color: $color_blue;
+        width: 1%;
+        margin-left: 32px;
+      }
+
+      article {
+        width: 80%;
+      }
+      h2 {
+        @include sous-titre();
+        color: $color_blanc;
+        width: 100%;
+        text-align: center;
+        margin-top: 32px;
+      }
+
+      h3 {
+        @include sous-titre();
+        color: $color_blue;
+        margin: 32px;
+      }
+
+      p {
+        @include paragraphe();
+        margin: 32px;
+      }
+    }
+
+    .slide:first-child {
+      display: block;
+    }
+
+    .slide:nth-of-type(1) {
+      background: #818181; ///
+    }
+
+    .slide:nth-of-type(2) {
+      background: #f4e4cd;
+    }
+
+    .slide:nth-of-type(3) {
+      background: #c75534;
+    }
+
+    .slide:nth-of-type(4) {
+      background: $color_gris;
+    }
+
+    .slide_buttons {
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+    }
+
+    a.slide_btn {
+      color: #474544;
+      font-size: 42px;
+      margin: 0 0.175em;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -ms-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .slide_btn.active,
+    .slide_btn:hover {
+      cursor: pointer;
+    }
+
+    .directional_nav {
+      height: 340px;
+      margin: 0 auto;
+      max-width: 100%;
+      position: relative;
+      top: -340px;
+    }
+
+    .previous_btn {
+      bottom: 0;
+      left: -0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+    }
+
+    .next_btn {
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .previous_btn,
+    .next_btn {
+      cursor: pointer;
+      height: 65px;
+      opacity: 0.5;
+      -webkit-transition: opacity 0.4s ease-in-out;
+      -moz-transition: opacity 0.4s ease-in-out;
+      -ms-transition: opacity 0.4s ease-in-out;
+      -o-transition: opacity 0.4s ease-in-out;
+      transition: opacity 0.4s ease-in-out;
+      width: 65px;
+    }
+
+    .previous_btn:hover,
+    .next_btn:hover {
+      opacity: 1;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .previous_btn {
+        left: 50px;
+      }
+      .next_btn {
+        right: 50px;
+      }
+    }
+  }
+
+  .contact_client {
+    @include bg();
+    @include flex();
+    width: 100%;
+    margin: 32px;
+
+    h2 {
+      margin: 16px;
+      @include sous-titre();
+    }
+
+    .visitcard {
+      width: 33%;
+      margin-left: -49px;
+      margin-top: 72px;
+      margin-bottom: 32px;
+
+      background-color: $color_fond;
+      @include flex();
+
+      .barrebleu2 {
+        width: 1px;
+        margin-left: 24px;
+        background-color: $color_blue;
+        height: 100%;
+      }
+
+      .detail_contact {
+        width: 70%;
+
+        h3 {
+          @include sous-titre();
+          margin-left: 32px;
+          margin-top: 8px;
+        }
+        span {
+          @include sous-titre();
+          margin-left: 32px;
+          margin-top: 16px;
+          font-size: 16px;
+        }
+        p {
+          @include paragraphe();
+          margin-left: 64px;
+          margin-top: 24px;
+          margin-bottom: 24px;
+        }
+        p,
+        h3,
+        span {
+          width: 100%;
+        }
+      }
+      article {
+        width: 25%;
+        span {
+          @include sous-titre();
+          font-size: 16px;
+          width: 100%;
+          margin-top: 32px;
+        }
+        p {
+          @include paragraphe();
+        }
+
+        #qrcode {
+          width: 100%;
+          background-color: $color_blanc;
+
+          border-radius: 16px;
+          max-width: 100px;
+          img {
+            width: 100%;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            padding: 8px;
+          }
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* helpers/align.css */
+
+.align {
+  display: grid;
+  place-items: center;
+}
+
+.grid {
+  inline-size: 90%;
+  margin-inline: auto;
+  max-inline-size: 20rem;
+  img {
+    width: 100%;
+    margin-bottom: 32px;
+    max-width: 327px;
+  }
+
+}
+
+
+/* helpers/hidden.css */
+
+.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* helpers/icon.css */
+
+:root {
+  --iconFill: var(--baseColor);
+}
+
+.icons {
+  display: none;
+}
+
+.icon {
+  block-size: 1em;
+  display: inline-block;
+  fill: var(--iconFill);
+  inline-size: 1em;
+  vertical-align: middle;
+}
+
+/* layout/base.css */
+
+:root {
+  --htmlFontSize: 100%;
+  --bodyBackgroundColor: #1f2029;
+  --bodyColor: var(--baseColor);
+  --bodyFontFamily: "Open Sans";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--htmlFontSize);
+}
+
+body {
+  background-color: var(--bodyBackgroundColor);
+  color: var(--bodyColor);
+  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+  font-size: var(--bodyFontSize);
+  font-weight: var(--bodyFontWeight);
+  line-height: var(--bodyLineHeight);
+  margin: 0;
+  min-block-size: 100vh;
+}
+
+/* modules/anchor.css */
+
+:root {
+  --anchorColor: #eee;
+}
+
+a {
+  color: var(--anchorColor);
+  outline: 0;
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* modules/form.css */
+
+:root {
+  --formGap: 0.875rem;
+}
+
+input {
+  background-image: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  transition: background-color 0.3s;
+
+  &[type="submit"] {
+    cursor: pointer;
+  }
+}
+
+.form {
+  display: grid;
+  gap: var(--formGap);
+
+  input {
+    &[type="password"],
+    &[type="text"],
+    &[type="submit"] {
+      inline-size: 100%;
+    }
+  }
+}
+
+.form__field {
+  display: flex;
+}
+
+.form__input {
+  flex: 1;
+}
+
+/* modules/login.css */
+
+:root {
+  --loginBorderRadus: 0.25rem;
+  --loginColor: #eee;
+  --loginInputBackgroundColor: #b3adad;
+  --loginInputHoverBackgroundColor: #434a52;
+  --loginLabelBackgroundColor: #818181;
+  --loginSubmitBackgroundColor: #28eeca;
+  --loginSubmitColor: #eee;
+  --loginSubmitHoverBackgroundColor: #0dba9b;
+}
+
+.login {
+  color: var(--loginColor);
+
+  label {
+    border-radius: var(--loginBorderRadus);
+    padding: 1rem;
+  }
+
+  input {
+    &[type="text"],
+    &[type="password"],
+    &[type="submit"] {
+      border-radius: var(--loginBorderRadus);
+      padding: 1rem;
+    }
+  }
+
+  label {
+    background-color: var(--loginLabelBackgroundColor);
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-inline: 1.25rem;
+  }
+
+  input {
+    &[type="password"],
+    &[type="text"] {
+      background-color: var(--loginInputBackgroundColor);
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &[type="password"] {
+      &:focus,
+      &:hover {
+        background-color: var(--loginInputHoverBackgroundColor);
+      }
+    }
+
+    &[type="text"] {
+      &:focus,
+      &:hover {
+        background-color: var(--loginInputHoverBackgroundColor);
+      }
+    }
+
+    &[type="submit"] {
+      background-color: var(--loginSubmitBackgroundColor);
+      color: var(--loginSubmitColor);
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:focus,
+      &:hover {
+        background-color: var(--loginSubmitHoverBackgroundColor);
+      }
+    }
+  }
+}
+
+/* modules/text.css */
+
+p {
+  margin-block: 1.5rem;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.main_devis_facture {
+  @include flex();
+  width: 100%;
+  h1 {
+    @include titre();
+    margin: 32px;
+    font-size: 48px;
+  }
+  h2 {
+    @include sous-titre();
+    margin: 32px;
+  }
+  form {
+    @include bg();
+    @include flex();
+    width: 100%;
+    margin: 32px;
+  }
+  article {
+    @include zone_text();
+    @include select();
+    @include flex();
+    @include paragraphe();
+    
+    margin-left: 16px;
+    margin-top: 16px;
+    width: 100%;
+    h2 {
+      @include sous-titre();
+      width: 100%;
+    }
+    div {
+      @include flex();
+      width: 45%;
+      margin: 2.5%;
+
+      input,
+      label,
+      select {
+        width: 100%;
+      }
+    }
+  }
+  button{
+    @include btn();
+    width: 100%; 
+  }
+}
+
+.main_pdf{
+
+  h1{
+    @include titre(); 
+  }
+  div{
+    background-color: $color_blanc;
+    margin: 32px;
+    width: 100px;
+
+  }
+}

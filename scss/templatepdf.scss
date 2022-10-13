@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+//color
+$color_blue: #28eeca;
+$color_gris: #818181;
+$color_blanc: #f2f2f2;
+$color_fond: #1f2029;
+
+// police d'écriture
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Source+Code+Pro&display=swap");
+
+@mixin titre {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 64px;
+    color: $color_blue;
+}
+
+@mixin sous-titre {
+    font-family: "Source Code Pro", "sans-serif;";
+    font-size: 24px;
+    color: black;
+}
+
+@mixin paragraphe {
+    font-family: "Roboto", "sans-serif";
+    font-size: 16px;
+    color: black;
+}
+
+main {
+    .hautdepage {
+        @include flex();
+        @include paragraphe();
+        width: 100%;
+        .devcav {
+            width: 75%;
+            img {
+                width: 50%;
+                max-width: 408px;
+            }
+            div {
+                margin-top: 17px;
+                P {
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .titre {
+            width: 25%;
+            h2 {
+                @include titre();
+                width: 100%; 
+                
+            }
+        }
+
+        .coordonnees {
+            @include flex();
+            width: 65%;
+            span {
+                width: 100%;
+                margin: 8px 0px;
+                padding: 8px;
+            }
+            article{
+
+            width: 35%;
+            padding: 8px;
+            strong {
+                width: 100%;
+                background-color: rgba(40, 238, 202, 0.3);
+               }
+               p{
+                   width: 100%; 
+               }
+            }
+        }
+
+        
+    }
+    .millieudepage {       
+         @include flex();
+        width: 100%;
+        strong {
+            background-color: rgba(40, 238, 202, 0.3);
+        }
+        p {
+            width: 50%;
+            @include flex();
+            @include paragraphe();
+        }
+
+        table {
+            
+            width: 100%;
+            
+        thead {
+              
+                tr {
+                    th {
+                        
+                       width: 100%;
+                        background-color: rgba(40, 238, 202, 0.3);
+                        text-align: center;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                       
+                        
+                       width: 100%;
+                        border: solid black 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    .basdepage { 
+        @include flex();
+        width: 100%;
+        span {
+            width: 50%;
+            background-color: rgba(40, 238, 202, 0.3);
+        }
+       
+        table {
+            
+            width: 50%;
+            border: solid black 1px;
+            tbody {
+                tr {
+                    td {
+                        
+
+                        background-color:rgba(40, 238, 202, 0.3) ;
+                    }
+                    td:first-child {
+                        
+                        border: solid black 1px;
+                        background-color: rgb(40, 238, 202);
+                    }
+                }
+            }
+        }
+        
+    }
+    .informations {
+            
+             p{   
+                 width: 100%;
+                text-align: center;
+            }
+        
+        }
+}

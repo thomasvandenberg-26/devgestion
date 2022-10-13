@@ -1,0 +1,218 @@
+/* -------------------------------- Général ------------------------------------------ */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+main {
+    max-width: 1640px;
+    margin: auto;
+}
+// color
+$color_blue: #28eeca;
+$color_gris: #818181;
+$color_blanc: #f2f2f2;
+$color_fond: #1f2029;
+
+//Police d'écriture
+
+// Titre
+@import url("https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap");
+
+//Sous titre
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
+
+//Paragraphe
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@mixin titre {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 64px;
+    color: $color_blanc;
+}
+
+@mixin sous-titre {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 32px;
+    color: $color_gris;
+}
+
+@mixin paragraphe {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: $color_blanc;
+}
+
+$col: (100%/12);
+
+body {
+    background-color: #1f2029;
+}
+
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin bg {
+    width: 100%;
+    background-color: rgba(242, 242, 242, 0.1);
+    border-radius: 16px;
+}
+
+@mixin select {
+    select {
+        padding: 8px;
+        border-radius: 16px;
+        border: 2px solid $color_fond;
+        option {
+            @include paragraphe();
+            color: $color_fond;
+            border-radius: 7px;
+        }
+        &:hover,
+        &:focus {
+            border: 2px solid $color_blue;
+        }
+    }
+}
+
+@mixin zone_text {
+    input[type="text"], input[type="number"], input[type="email"], input[type="tel"], input[type="password"], textarea {
+        background-color: transparent;
+        border-bottom: 1px solid $color_gris;
+        color: $color_blanc;
+
+        &:focus,
+        &:hover {
+            border-bottom: 1px solid $color_blue;
+        }
+    }
+}
+
+@mixin date {
+    input[type="date"] {
+        border-radius: 16px;
+        border: 2px solid $color_fond;
+
+        &:hover,
+        &:focus {
+            border: 2px solid $color_blue;
+        }
+    }
+}
+
+@mixin fichier {
+    .fichier {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        .btn-upload {
+            @include paragraphe();
+            background-color: transparent;
+            border: 1px solid $color_blanc;
+            color: $color_blanc;
+            padding: 10px 25px;
+            border-radius: 10px;
+            &:hover,
+            &:focus {
+                border: 1px solid $color_blue;
+            }
+        }
+        input[type="file"] {
+            left: 0;
+            top: 0;
+            opacity: 0;
+            position: absolute;
+            font-size: 90px;
+        }
+    }
+}
+
+@mixin btn {
+    input[type="submit"], button {
+        background-color: transparent;
+        border-radius: 7px;
+        border: 1px solid $color_blue;
+        @include titre();
+        font-size: 32px;
+        padding: 8px 64px;
+        cursor: pointer;  
+    }
+}
+
+@mixin tab {
+    .tab {
+        overflow: hidden;
+        background-color: rgba(242, 242, 242, 0.1);
+        margin-top: 32px;
+        border-radius: 8px 8px 0px 0px;
+        border: 1px solid $color_blanc;
+        border-bottom: none; 
+        a {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            color: $color_fond;
+            &:hover {
+                color: $color_blue;
+                background-color: #ddd;
+            }
+        }
+        a.active {
+            background-color: #ccc;
+        }
+    }
+
+    .tabcontent {
+        background-color: rgba(242, 242, 242, 0.1);
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+        margin-bottom: 32px; 
+    }
+}
+
+@mixin table{
+    table{
+        @include paragraphe(); 
+        border-collapse: collapse;
+        width: 100%;
+        td, th{
+            border: 1px solid $color_gris;
+            padding: 8px;
+        }
+        td{
+            button{
+                font-size: 16px;
+            }
+        }
+        tr:nth-child(even){
+            background-color: $color_blanc;
+            color: $color_fond; 
+            button{
+                color: $color_fond;
+            }
+        }
+        tr:hover{
+            background-color: $color_gris;
+        }
+        th{
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: $color_blue;
+            color: white;
+
+        }
+    }
+}
+
